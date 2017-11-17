@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="jeyanthchandru.logarithmcalculator.MainActivity"
+    android:background="@android:color/holo_blue_bright">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="50dp"
+        android:textAlignment="center"
+        android:layout_centerVertical="false"
+        android:layout_centerInParent="false"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/valueResult" />
+
+    <TextView
+        android:text="log (base x) x"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/logBase"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:layout_below="@+id/baseText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="26dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/numberText"
+        android:hint="Enter Number"
+        android:textAlignment="center"
+        android:layout_below="@+id/valueResult"
+        android:layout_toStartOf="@+id/logBase" />
+
+    <TextView
+        android:text="of base"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2"
+        android:textSize="20dp"
+        android:layout_alignBaseline="@+id/numberText"
+        android:layout_alignBottom="@+id/numberText"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/baseText"
+        android:hint="Enter Base Logarithm"
+        android:textAlignment="center"
+        android:layout_alignBaseline="@+id/textView2"
+        android:layout_alignBottom="@+id/textView2"
+        android:layout_toEndOf="@+id/logBase" />
+
+    <Button
+        android:text="Calculate Log"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="41dp"
+        android:id="@+id/logBtn"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@android:color/background_light"
+        android:textAlignment="center"
+        android:autoText="true"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_below="@+id/logBase"
+        android:layout_alignEnd="@+id/baseText" />
+</RelativeLayout>

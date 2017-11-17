@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_contact_map"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mycontactlist.ContactMapActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/navbar"
+        android:background="@color/navbar_background"
+        android:layout_alignParentBottom="true">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/contactlisticon"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/imageButtonMap"
+            android:layout_toStartOf="@+id/imageButtonMap"
+            android:layout_marginRight="20dp"
+            android:layout_marginEnd="20dp"
+            android:id="@+id/imageButtonList" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/mapicon"
+            android:id="@+id/imageButtonMap"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/settingsicon"
+            android:id="@+id/imageButtonSettings"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_toRightOf="@+id/imageButtonMap"
+            android:layout_toEndOf="@+id/imageButtonMap" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textDisplayGPS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentStart="true"
+        android:textSize="20sp"
+        android:text="GPS Sensor :" />
+
+    <TextView
+        android:id="@+id/textViewLat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textDisplayGPS"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:text="Latitude : " />
+
+    <TextView
+        android:id="@+id/textViewLong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewLat"
+        android:layout_alignStart="@+id/textViewLat"
+        android:layout_below="@+id/textViewLat"
+        android:text="Longitude : "
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:id="@+id/textViewAcc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewLong"
+        android:layout_alignStart="@+id/textViewLong"
+        android:layout_below="@+id/textViewLong"
+        android:text="Accuracy : "
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:id="@+id/textLatitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/textViewLat"
+        android:layout_toEndOf="@+id/textViewLat"
+        android:layout_below="@+id/textDisplayGPS"
+        android:layout_marginTop="10dp"
+        android:text="None" />
+
+    <TextView
+        android:id="@+id/textLongitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/textViewLong"
+        android:layout_toEndOf="@+id/textViewLong"
+        android:layout_below="@+id/textLatitude"
+        android:text="None"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:id="@+id/textAccuracy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/textViewAcc"
+        android:layout_toEndOf="@+id/textViewAcc"
+        android:layout_below="@+id/textLongitude"
+        android:text="None"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:id="@+id/textDisplayNetwork"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textAccuracy"
+        android:text="Network Sensor :"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"
+        />
+
+    <TextView
+        android:id="@+id/textViewLat1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/textDisplayNetwork"
+        android:text="Latitude : " />
+
+    <TextView
+        android:id="@+id/textViewLong1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewLat1"
+        android:layout_alignStart="@+id/textViewLat1"
+        android:layout_below="@+id/textViewLat1"
+        android:text="Longitude : "
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:id="@+id/textViewAcc1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewLong1"
+        android:layout_alignStart="@+id/textViewLong1"
+        android:layout_below="@+id/textViewLong1"
+        android:text="Accuracy : "
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:id="@+id/textLatitude1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/textViewLat1"
+        android:layout_toEndOf="@+id/textViewLat1"
+        android:layout_below="@+id/textDisplayNetwork"
+        android:layout_marginTop="10dp"
+        android:text="None" />
+
+    <TextView
+        android:id="@+id/textLongitude1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/textViewLong1"
+        android:layout_toEndOf="@+id/textViewLong1"
+        android:layout_below="@+id/textLatitude1"
+        android:text="None"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:id="@+id/textAccuracy1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/textViewAcc1"
+        android:layout_toEndOf="@+id/textViewAcc1"
+        android:layout_below="@+id/textLongitude1"
+        android:text="None"
+        android:layout_marginTop="10dp"
+        />
+
+    <Button
+        android:id="@+id/buttonGetLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textAccuracy1"
+        android:layout_marginTop="10dp"
+        android:text="Get Coordinates" />
+
+    <TextView
+        android:id="@+id/textBestSensor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonGetLocation"
+        android:text="Best Sensor :"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"
+        />
+
+    <TextView
+        android:id="@+id/textSensor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonGetLocation"
+        android:text="None"
+        android:layout_toRightOf="@+id/textBestSensor"
+        android:layout_toEndOf="@+id/textBestSensor"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"
+        />
+
+    <TextView
+        android:id="@+id/textViewLat2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/textBestSensor"
+        android:text="Latitude : " />
+
+    <TextView
+        android:id="@+id/textViewLong2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewLat2"
+        android:layout_alignStart="@+id/textViewLat2"
+        android:layout_below="@+id/textViewLat2"
+        android:text="Longitude : "
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:id="@+id/textViewAcc2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewLong2"
+        android:layout_alignStart="@+id/textViewLong2"
+        android:layout_below="@+id/textViewLong2"
+        android:text="Accuracy : "
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:id="@+id/textLatitude2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/textViewLat2"
+        android:layout_toEndOf="@+id/textViewLat2"
+        android:layout_below="@+id/textBestSensor"
+        android:layout_marginTop="10dp"
+        android:text="None" />
+
+    <TextView
+        android:id="@+id/textLongitude2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/textViewLong2"
+        android:layout_toEndOf="@+id/textViewLong2"
+        android:layout_below="@+id/textLatitude2"
+        android:text="None"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:id="@+id/textAccuracy2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/textViewAcc2"
+        android:layout_toEndOf="@+id/textViewAcc2"
+        android:layout_below="@+id/textLongitude2"
+        android:text="None"
+        android:layout_marginTop="10dp"
+        />
+
+
+</RelativeLayout>
